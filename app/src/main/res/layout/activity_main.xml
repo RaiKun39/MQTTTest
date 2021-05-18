@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:textSize="25dp"
+        android:id="@+id/submessage"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:layout_below="@+id/submessage"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnconnect"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnconnect"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Topic to send"
+        android:id="@+id/topictosend"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topictosend"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Message"
+        android:id="@+id/edtpub"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtpub"
+        android:layout_centerHorizontal="true"
+        android:text="Publish"
+        android:id="@+id/btnpub"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnpub"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Topic to Subscribe"
+        android:id="@+id/edtsub"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtsub"
+        android:text="Subscribe"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnsub"/>
+
+</RelativeLayout>

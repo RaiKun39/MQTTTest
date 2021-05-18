@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="240dp"
+    android:padding="@dimen/widget_margin"
+    android:theme="@style/ThemeOverlay.MQTTTest.AppWidgetContainer">
+
+    <ImageView
+        android:id="@+id/status1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/grey"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="65dp"/>
+
+    <ImageView
+        android:id="@+id/status2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/grey"
+        android:layout_toRightOf="@+id/status1"
+        android:layout_marginLeft="30dp"
+        android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>
