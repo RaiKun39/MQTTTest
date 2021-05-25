@@ -8,7 +8,7 @@
         android:id="@+id/status1"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/grey"
+        android:src="@drawable/switch_off"
         android:layout_centerVertical="true"
         android:layout_marginLeft="65dp"/>
 
@@ -16,7 +16,7 @@
         android:id="@+id/status2"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/grey"
+        android:src="@drawable/switch_off"
         android:layout_toRightOf="@+id/status1"
         android:layout_marginLeft="30dp"
         android:layout_centerVertical="true"/>

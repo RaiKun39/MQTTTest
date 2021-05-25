@@ -9,6 +9,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Camera;
@@ -190,10 +191,17 @@ public class MainActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                     }
-
-
+                    Intent intent = new Intent(MainActivity.this, SwitchStatus.class);
+                    intent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+                    int[] ids = AppWidgetManager.getInstance(getApplication())
+                            .getAppWidgetIds(new ComponentName(getApplication(), SwitchStatus.class));
+                    intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids);
+                    String status = "On";
+                    intent.putExtra("status", status);
+                    sendBroadcast(intent);
 
                 }
+
 
                 if (new String(message.getPayload()).equals("Off") & topic.equals("Switch")) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -207,8 +215,13 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     Intent intent = new Intent(MainActivity.this, SwitchStatus.class);
-
-
+                    intent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+                    int[] ids = AppWidgetManager.getInstance(getApplication())
+                            .getAppWidgetIds(new ComponentName(getApplication(), SwitchStatus.class));
+                    intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids);
+                    String status = "Off";
+                    intent.putExtra("status", status);
+                    sendBroadcast(intent);
                 }
 
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_1_ID)

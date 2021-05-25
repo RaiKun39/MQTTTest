@@ -21,6 +21,7 @@
         <receiver android:name=".SwitchStatus">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="status1"/>
             </intent-filter>
 
             <meta-data
